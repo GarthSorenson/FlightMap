@@ -19,7 +19,7 @@ namespace ProjCh7
         public bool isEmpty();
         public int size();
         public void add(int index, City item);
-        public Object get(int index);
+        public City get(int index);
         public void remove(int index);
         public void removeAll();
 

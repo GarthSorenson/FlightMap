@@ -45,7 +45,7 @@ namespace ProjCh7
             return curr;
         } // end find
 
-        public Object get(int index)
+        public City get(int index)
         {
             if (index >= 0 && index < numItems)
             {

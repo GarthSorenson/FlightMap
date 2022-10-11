@@ -38,7 +38,7 @@ namespace ProjCh7
         // StackException when newItem cannot be placed on
         // the stack.
 
-        public Object pop();
+        public City pop();
         // Removes the top of a stack.
         // Precondition: None.
         // Postcondition: If the stack is not empty, the item
@@ -47,7 +47,7 @@ namespace ProjCh7
         // Exception: Throws StackException if the stack is
         // empty.
 
-        public Object peek();
+        public City peek();
         // Retrieves the top of a stack.
         // Precondition: None.
         // Postcondition: If the stack is not empty, the item

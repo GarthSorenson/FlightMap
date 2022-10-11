@@ -1,4 +1,4 @@
-﻿// City.cs contains a City class where a City contains a name
+﻿// City.cs contains a City class where a City contains a name.
 // It provides a compareTo method and supports ToString.
 // Written by Garth Sorenson
 // 11 Oct 2022

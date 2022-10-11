@@ -25,7 +25,7 @@ namespace ProjCh7
             top = new Node(newItem, top);
         }  // end push
 
-        public Object pop()
+        public City pop()
         {
             if (!isEmpty()) {
                 Node temp = top;
@@ -42,7 +42,7 @@ namespace ProjCh7
             top = null;
         }  // end popAll
 
-        public Object peek()
+        public City peek()
         {
             if (!isEmpty()) {
                 return top.Item;
