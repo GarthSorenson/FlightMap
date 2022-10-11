@@ -20,9 +20,10 @@ namespace ProjCh7
             FlightMap map;
             StreamReader inStream;
             string[] fromToPair;
+            string fromCity, toCity;
 
             // display greeting
-            Console.WriteLine("HP Airlines!\n");
+            Console.WriteLine("HP Air!\n");
             Console.WriteLine("A flight map is generated based on the cities served listed in a City file");
             Console.WriteLine("and the direct flights listed in a Flight file.");
             Console.WriteLine("Then all requests listed in a Request file will be considered.");
@@ -43,7 +44,21 @@ namespace ProjCh7
             while (!inStream.EndOfStream)
             {
                 fromToPair = inStream.ReadLine().Split(",");
-                Console.WriteLine($"\nRequest is to fly from {fromToPair[0].Trim()} to {fromToPair[1].Trim()}.");
+                fromCity = fromToPair[0].Trim();
+                toCity = fromToPair[1].Trim();
+                Console.WriteLine($"\nRequest is to fly from {fromCity} to {toCity}.");
+                if (map.isServed(fromCity) && map.isServed(toCity))
+                {
+                    if (map.isPath(fromCity, toCity))
+                        Console.WriteLine($"HPAir flies from {fromCity} to {toCity}.");
+                    else
+                        Console.WriteLine($"Sorry. HPAir does not fly from {fromCity} to {toCity}.");
+                }
+                if (!map.isServed(fromCity))
+                    Console.WriteLine($"Sorry. HPAir does not serve {fromCity}.");
+                if (!map.isServed(toCity))
+                    Console.WriteLine($"Sorry. HPAir does not serve {toCity}.");
+
             }
         }
         

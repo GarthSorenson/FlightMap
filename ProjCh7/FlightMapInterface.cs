@@ -32,5 +32,8 @@ namespace ProjCh7
         //public void insertAdjacent(City aCity, City adjCity);
         // Inserts a city adjacent to another city in a flight map.
 
+        //public bool isServed(City aCity);
+        // Determines if a given city is served.
+
     }
 }
