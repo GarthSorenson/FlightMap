@@ -18,6 +18,8 @@ namespace ProjCh7
         {
             string cityFilename, flightFilename, requestFilename;
             FlightMap map;
+            StreamReader inStream;
+            string[] fromToPair;
 
             // display greeting
             Console.WriteLine("HP Airlines!\n");
@@ -37,9 +39,14 @@ namespace ProjCh7
 
             // get Request filename, open file, and handle each request
             requestFilename = GetValidFilename("Request");
-
+            inStream = new StreamReader(requestFilename);
+            while (!inStream.EndOfStream)
+            {
+                fromToPair = inStream.ReadLine().Split(",");
+                Console.WriteLine($"\nRequest is to fly from {fromToPair[0].Trim()} to {fromToPair[1].Trim()}.");
+            }
         }
-
+        
         // Gets and returns a valid file's name from the user.
         public static string GetValidFilename(string which)
         {
