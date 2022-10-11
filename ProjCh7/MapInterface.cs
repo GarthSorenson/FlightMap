@@ -8,7 +8,7 @@ namespace ProjCh7
 {
     internal interface MapInterface
     {
-        //public FlightMap();
+        //public Map();
         // Creates an empty flight map
 
         public void read(string CityFileName, string flightFileName);

@@ -51,7 +51,7 @@ namespace ProjCh7
             {
                 // get reference to node, then data in node
                 Node curr = find(index);
-                Object dataItem = curr.Item;
+                City dataItem = curr.Item;
                 return dataItem;
             }
             else
