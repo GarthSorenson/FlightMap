@@ -54,7 +54,8 @@ namespace ProjCh7
                     stack.push(nextCity);
                     markVisited(nextCity);
                 }  // end if
-                topCity = (City)stack.peek();
+                if (!stack.isEmpty())
+                    topCity = (City)stack.peek();
             }  // end while
             if (stack.isEmpty())
             {
