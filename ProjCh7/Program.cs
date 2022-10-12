@@ -38,6 +38,12 @@ namespace ProjCh7
             map = new Map();
             map.read(cityFilename, flightFilename);
 
+            // display flight map
+            Console.WriteLine("\nFlight Map");
+            Console.WriteLine("-----------");
+            map.display();
+            Console.WriteLine();
+
             // get Request filename, open file, and handle each request
             requestFilename = GetValidFilename("Request");
             inStream = new StreamReader(requestFilename);
