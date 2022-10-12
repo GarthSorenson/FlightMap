@@ -35,7 +35,7 @@ namespace ProjCh7
 
             topCity = (City)(stack.peek());
             while (!stack.isEmpty() &&
-                    (topCity.compareTo(destinationCity) != 0))
+                    (!topCity.compareTo(destinationCity)))
             {
                 // loop invariant: stack contains a directed path
                 // from the origin city at the bottom of the stack
