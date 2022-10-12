@@ -26,6 +26,10 @@ namespace ProjCh7
         public void markVisited(City aCity);
         // Marks a city as visited
 
+        public City getNextCity(City aCity);
+        // Returns the next unvisited city adjacent to a City
+
+
         public void unvisitAll();
         // Clears marks on all cities
 
